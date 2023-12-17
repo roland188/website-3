@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <script>
+        function maskAppToNative(name,param) {
+            // console.log('maskAppToNative',name,param)
+            if (window.isMaskApp && window.AnalyticsWebInterface && window.AnalyticsWebInterface.onEvent) {
+                if (param) {
+                    window.AnalyticsWebInterface.onEvent(name,param);
+                } else {
+                    window.AnalyticsWebInterface.onEvent(name);
+                }
+			}
+        }
+        function maskAppOldToNative(name,param){
+            if (window.isMaskApp && window.ANDROID_JS_BRIDGE) {
+              if (window.ANDROID_JS_BRIDGE.gree_page)
+              if (param) {
+                   window.ANDROID_JS_BRIDGE.gree_page(name,param);
+                } else {
+                   window.ANDROID_JS_BRIDGE.gree_page(name);
+                }
+               
+            }
+        }
+    </script>
+        <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+        <meta name="viewport"
+            content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent">
+        <meta name="full-screen" content="true">
+        <meta name="x5-fullscreen" content="true">
+        <meta name="360-fullscreen" content="true">
+        <link rel="shortcut icon" type="image/png"
+            href="/static/image/favicon/amjs.png">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Welcome" />
+        <link rel="apple-touch-icon-precomposed" type="image/png"
+            href="/static/image/favicon/amjs.png">
+
+        <!-- <script src="/static/url.js?v=20200826022"></script> -->
+        <script src="/static/url.js?v=<%=Date.now()%>"></script>
+        <script src="/static/extra.js?v=20200826022"></script>
+        <style>
+        body::after {
+            content: none!important
+        }
+        
+        @keyframes shadow-preload {
+            90% {
+                background-image: url(static/image/centerImg/shang.png)!important
+            }
+            100% {
+                background-image: url(static/image/centerImg/shang.png)!important
+            }
+        }
+        
+        @-webkit-keyframes shadow-preload {
+            0% {
+                background-image: url(static/image/centerImg/shang.png)!important
+            }
+            100% {
+                background-image: url(static/image/centerImg/shang.png)!important
+            }
+        }
+    </style>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + "px"
+        })
+    </script>
+        <link rel="stylesheet" href="<%=BASE_URL%>static/index.<%=VUE_APP_INDEX_CSS_HASH%>.css">
+        </head>
+
+        <body>
+            <div id="app"></div>
+            <span class="statistics"></span>
+
+        </body>
+        <script type="text/javascript">
+    var u = window.location.hostname;
+    var a = u.split(".");
+
+    function s() {
+        var h;
+        var p = a;
+        var w = window.location.protocol;
+        var z = p.length > 2 && p[0] == "m";
+        let o = u.substring(2, u.length);
+        let y = w + '//' + o
+        var m = /Android|webOS|iPhone|ipad|iPod|BlackBerry|XiaoMi/i.test(navigator.userAgent);
+        if (!m && z) {
+            window.location.href = y;
+        }
+    };
+    if (u !== 'localhost') {
+        s()
+    }
+</script>
+    </html>
