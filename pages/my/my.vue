@@ -424,6 +424,7 @@
         @click="$refs.showtip.close()"
       ></image>
     </uni-popup>
+    <TabBar :curIndex="4"/>
   </view>
 </template>
 
@@ -433,11 +434,13 @@ import cache from "../../utils/cache.js";
 import chunLeiModal from "@/components/chunLei-modal/chunLei-modal.vue";
 import uniPopup from "@/components/uni-popup/uni-popup.vue";
 import btnImg from "@/static/image/public/vi/btn.png"
+import TabBar from "../../components/myTabBar/index.vue";
 export default {
   components: {
     uniNavBar,
     "chunLei-modal": chunLeiModal,
     uniPopup,
+    TabBar,
   },
   data() {
     return {

@@ -30,9 +30,15 @@
     </scroll-view>
     <!-- GameList -->
     <view >
-      <HotGameList :gameList="gameList" @difference="difference" v-if="id == 0"/>
-      <LiveGameList :gameList="gameList" @difference="difference" v-if="id == 3"/>
-      <SportGameList  :gameList="gameList" @difference="difference" v-if="id == 2 || id == 4 || id == 7"/>
+      <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 0"/>
+      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 3"/>
+      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 2 || id == 4 || id == 7"/>
+      <MultiGameList  
+        :gameId="id" 
+        :navIndex="navIndex" 
+        :gameMenus="gamemenus"
+        @difference="difference" 
+        v-if="id == 5 || id == 1 || id == 9"/>
     </view>
   </view>
 </template>
@@ -41,11 +47,13 @@
 import HotGameList from '../../gameList/hotGameList.vue';
 import LiveGameList from '../../gameList/liveGameList.vue';
 import SportGameList from '../../gameList/sportGameList.vue';
+import MultiGameList from '../../gameList/multiGameList.vue';
 export default {
   components: {
     HotGameList,
     LiveGameList,
-    SportGameList
+    SportGameList,
+    MultiGameList
   },
   props: {
     arr: Array,
@@ -70,6 +78,8 @@ export default {
   created(){
 	  this.gameList = this.leftArray[this.navIndex]?.children
 	  this.id = this.leftArray[this.navIndex]?.id
+  },
+  onShow() {
   },
   mounted() {    
 			this.$nextTick(() => {
@@ -241,63 +251,6 @@ export default {
       color: #ff9000;
     }
   }
-  .secondList {
-    position: relative;
-    // padding-left: 25%;
-    // max-height: 784upx;
-    overflow-y: auto;
-    .game {
-      flex: 1;
-      height: 226upx;
-      margin-bottom: 2%;
-      overflow: hidden;
-      border-radius: 25upx;
-      background: url("../../../static/image/indexImg/game-bg.png") no-repeat center/contain;
-      .inner {
-        position: relative;
-        width: 100%;
-        padding-top: 105%;
-        .img {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-
-        .title {
-          position: absolute;
-          bottom: 34upx;
-          left: 0px;
-          width: 100%;
-          line-height: 40upx;
-          height: 40upx;
-          padding: 0 20upx;
-          text-align: center;
-          color: #fff;
-          font-size: 14px;
-          font-weight: 600;
-          text-align: center;
-          text-transform: uppercase;
-          background: #414141;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-    // .game1 {
-    //   float: left;
-    //   width: 98%;
-    //   margin-left: 2%;
-    //   margin-bottom: 2%;
-    //   background: url("../../../static/image/indexImg/game1-bg.png") no-repeat center/contain;
-    //   .inner1 {
-    //     width: 100%;
-    //     padding-top: 44%;
-    //   }
-    // }
-  }
+  
 }
 </style>

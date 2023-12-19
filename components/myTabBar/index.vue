@@ -1,22 +1,17 @@
 <template>
     <view class="tabBar">
+        <view class="tabBar-active">            
+            <view class="selected-tabBar-mark" v-for="(item, index) in tabList" :key="index" @click="toIndex(item, index)">
+                <image src='../../static/image/tabbar/selectedTab.png' v-show="tabIndex == index" mode="widthFix"/>
+            </view>
+        </view>
         <view class="tabBar-box">
-            <view class="tabBar-item" @click="toIndex('/pages/index/index')" >
-                <view  class="rabLabel">
-                    <text>商品</text>
-                    <!--<view class="tabIcon">2</view>-->
-                </view>
-            </view>
- 
-            <view class="tabBar-item" @click="toIndex('/pages/show/show')" >
-                <view  class="rabLabel">
-                    <text>定制</text>
-                    <view class="tabIcon"></view>
-                </view>
-            </view>
-            <view class="tabBar-item" @click="toIndex('/pages/home/home')" >
-                <view  class="rabLabel">
-                    <text>我的</text>
+            <view class="tabBar-item" v-for="(item, index) in tabList" :key="index" @click="toIndex(item, index)">                
+                <view  :class="{'rabLabel': true, 'active': tabIndex == index}">
+                    <view class="tab-icon">
+                        <image :src="tabIndex == index ? item.selectedIconPath : item.iconPath" mode="widthFix"/>
+                    </view>
+                    <text class="title">{{ item.text  }}</text>
                     <!--<view class="tabIcon">2</view>-->
                 </view>
             </view>
@@ -27,12 +22,50 @@
  
 <script>
     export default {
+        props: {
+            curIndex: Number,
+        },
+        data() {
+            return {
+                tabIndex: this.curIndex ?? 0,
+                tabList: [{
+                    "pagePath": "/pages/index/index",
+                    "iconPath": "../../static/image/tabbar/indexIcon.png",
+                    "selectedIconPath": "../../static/image/tabbar/indexIcon_active.png",
+                    "text": this.$t('首页')
+                }, {
+                    "pagePath": "/pages/subCustomerService/subCustomerService",
+                    "iconPath": "../../static/image/tabbar/customerService.png",
+                    "selectedIconPath": "../../static/image/tabbar/customerService_active.png",
+                    "text": this.$t('在线客服')
+                }, {
+                    "pagePath": "/pages/preferential/preferential",
+                    "iconPath": "../../static/image/tabbar/preferential.png",
+                    "selectedIconPath": "../../static/image/tabbar/preferential_active.png",
+                    "text": this.$t('优惠')
+                },{
+                    "pagePath": "/pages/vipLevel/vipLevel",
+                    "iconPath": "../../static/image/tabbar/vip.png",
+                    "selectedIconPath": "../../static/image/tabbar/vip_active.png",
+                    "text": this.$t('VIP')
+                },{
+                    "pagePath": "/pages/my/my",
+                    "iconPath": "../../static/image/tabbar/member.png",
+                    "selectedIconPath": "../../static/image/tabbar/member_active.png",
+                    "text": this.$t('会员中心')
+                }],
+            }
+        },
+        onLoad() {            
+            
+        },
         methods:{
-            toIndex(url){
-                console.log(url);
+            toIndex(item, index){
                 uni.switchTab({
-                    url: url
-                })
+                    url: item.pagePath,
+                    animationType: 'pop-in',
+                    animationDuration: 200
+                });
             }
         }
     }
@@ -42,16 +75,34 @@
     .tabBar {
         position: fixed;
         bottom: 0;
-        left: 0;
         width: 100%;
-        height: 100rpx;
-        background: #8a6de9;
+        height: 3.3rem;
+        background: linear-gradient(180deg,#363636,#121212);
+        border-top: 0.0625rem solid #db9c30;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        .tabBar-active {
+            margin-top: -20px;
+            display: flex;
+            .selected-tabBar-mark {
+                width: 20%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 560px) {
+        .tabBar {
+            width: 27rem;
+            max-width: 27rem;
+        }
     }
  
     .tabBar-box {
         display: flex;
         width: 100%;
         height: 100%;
+        margin-top: -12px;
     }
     .tabBar-item{
         display: flex;
@@ -59,10 +110,28 @@
         align-items: flex-end;
         flex: 1;
         height: 100%;
-        background: #2C405A;
+        color: #aaa;
     }
     .rabLabel{
         position: relative;
+        font-size: .75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .tab-icon{
+            padding: .4375rem 0 0;
+            width: 1.5rem;
+        }
+        .title {
+            margin-top: -5px;
+        }
+    }
+    .rabLabel.active {
+        .title {
+            color: #ff9000;
+        }
     }
     .tabIcon{
         position: absolute;

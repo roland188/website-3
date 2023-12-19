@@ -15,7 +15,6 @@
           <view
           class="game"
               :class="'game1'"
-          v-if="item.name !== $t('捕鱼达人')"
           >
           <view
               class="inner inner1"
@@ -49,6 +48,7 @@
   export default {
     props: {
       gameList: Array,
+      navIndex: Number,
     },
     data() {
       return {

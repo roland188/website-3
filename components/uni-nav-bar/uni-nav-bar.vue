@@ -165,9 +165,16 @@ $nav-height: 52px;
 
 .uni-navbar__content {
   position: relative;
-  width: 27rem;
+  width: 100%;
   background-color: $uni-bg-color;
   overflow: hidden;
+}
+
+@media screen and (min-width: 560px) {
+  .uni-navbar__content {
+    width: 27rem;
+    max-width: 27rem;
+  }
 }
 
 .uni-navbar__content_view {
@@ -241,7 +248,6 @@ $nav-height: 52px;
   position: fixed;
   z-index: 998;
 }
-
 .uni-navbar--shadow {
   /* #ifndef APP-NVUE */
   box-shadow: 0 1px 6px #ccc;

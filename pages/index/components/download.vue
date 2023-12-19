@@ -16,7 +16,7 @@
       </view>
       <view class="title1" v-else>{{ $t("千款游戏 随时随地 想玩就玩") }} </view>
     </view>
-    <view class="btn" @click="dowApp()">
+    <view class="btn" @click="downloadApp()">
       <!-- <image
         src="@/static/image/mb/bm_img_d1.png"
         style="width: 68px; height: 22px"
@@ -86,19 +86,33 @@ export default {
         window.location.href = this.$config.iosDownloadUrl
       }
     },
+    downloadApp() {
+      if (this.isAndroid) {
+        if(this.$config.androidDownloadUrl)
+          window.location.href = this.$config.androidDownloadUrl;
+        else if(this.$server.getAndroidDownloadUrl())
+          window.location.href = this.$server.getAndroidDownloadUrl();
+      }
+      if (this.isIos) {
+        if(this.$config.iosDownloadUrl)
+          window.location.href = this.$config.iosDownloadUrl;
+        else if(this.$server.getIosDownloadUrl())
+          window.location.href = this.$server.getIosDownloadUrl();
+      }
+    }
   },
 };
 </script>
 
 <style lang="less" scoped>
 .fixedCon {
-  width: 27rem;
+  width: 100%;
   height: 2.5rem;
   margin-top: 52px;
   background: rgba(51,51,51,.9);
   position: fixed;
   top: 0;
-  z-index: 9999 !important;
+  z-index: 99 !important;
   display: flex;
   justify-content: center;
   padding: 0 17upx;  
@@ -123,7 +137,6 @@ export default {
   }
 
   .btn {
-    width: 128upx;
     height: 1.65rem;
     line-height: 1.65rem;
     text-align: center;
@@ -131,11 +144,20 @@ export default {
     text-transform: uppercase;
     color: white;
     border-radius: 8upx;
+    padding: 0 0.2rem;
     border: 1px solid white;
   }
 
   .tutorial {
     margin-top: 20upx;
+  }
+}
+
+
+@media screen and (min-width: 560px) {
+  .fixedCon {
+    width: 27rem;
+    max-width: 27rem;
   }
 }
 </style>

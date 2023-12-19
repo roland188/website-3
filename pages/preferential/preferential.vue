@@ -82,14 +82,17 @@
         </view>
       </view>
     </view>
+    <TabBar :curIndex="2"/>
   </view>
 </template>
 
 <script>
 import { uniLoadMore } from "@dcloudio/uni-ui";
+import TabBar from "../../components/myTabBar/index.vue";
 export default {
   components: {
     uniLoadMore,
+    TabBar,
   },
   data() {
     return {
@@ -160,7 +163,6 @@ export default {
         (err, res) => {
           this.totalRecords = res.totalRecords;
           if (res.content) {
-            console.log(res.content.length);
             if (this.currentPage == 1) {
               this.activityList = res.content;
             } else {
@@ -365,10 +367,10 @@ page {
     width: 100%;
     position: fixed;
     /* #ifdef APP-PLUS */
-    top: calc(80upx + var(--status-bar-height));
+    top: calc(52px + var(--status-bar-height));
     /* #endif */
     /* #ifdef H5 */
-    top: 80rpx;
+    top: 52px;
     /* #endif */
 
     background: #0f0f0f;

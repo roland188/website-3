@@ -46,9 +46,8 @@ export default {
     }
     // #endif
 
-    // #ifdef APP-PLUS
-    plus.screen.lockOrientation("portrait-primary");
-    // #endif
+    uni.hideTabBar();
+    
     // 获取服务配置
     setTimeout(() => {
       // 设置语言
@@ -94,7 +93,7 @@ export default {
     this.interval = setInterval(() => {
       this.getMaintain();
     }, interval);
-    setTabbarItem();
+    setTabbarItem();    
     uni.hideTabBar({});
   },
   onHide() {},

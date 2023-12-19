@@ -39,7 +39,8 @@
         <!-- <LuckyBag /> -->
 
         <!-- 右侧浮窗 -->
-		<RightFloatingFrame :login="login" @goPlayGame="goPlayGame" />
+		<!-- <RightFloatingFrame :login="login" @goPlayGame="goPlayGame" /> -->
+    <TabBar :curIndex="myTabIndex"></TabBar>
     </view>
 </template>
 
@@ -53,6 +54,7 @@ import HomeTabs from "@/components/home-tabs.vue";
 import GameList from "./components/gameList.vue";
 import PrizePool from './components/PrizePool.vue'
 import OtherInfo from './components/otherInfo.vue'
+import TabBar from "../../components/myTabBar/index.vue"
 import { updateApp } from "./components/updateApp.js";
 // import LuckyBag from './components/luckyBag.vue'
 import RightFloatingFrame from "../../components/rightFloatingFrame/rightFloatingFrame.vue";
@@ -70,6 +72,7 @@ export default {
     GameList,
     OtherInfo,
     PrizePool,
+    TabBar,
     // LuckyBag
     RightFloatingFrame,
   },
@@ -144,6 +147,7 @@ export default {
       // 图片规则
       arr: [],
       langType: this.$store.state.lang,
+      myTabIndex: 0,
     };
   },
   onPullDownRefresh() {
@@ -194,6 +198,7 @@ export default {
     // #ifdef H5
     this.langType = uni.getStorageSync("lang") || window.locale || "vi";
     // #endif
+    this.myTabIndex = 0;
   },
   onLoad() {
     // #ifdef APP-PLUS

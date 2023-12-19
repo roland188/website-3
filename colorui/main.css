@@ -26,12 +26,12 @@ body {
 		margin: 0 auto;
 	}
 
-	html {
-		background: black;
-		font-size: 1.152rem !important;
-	}
+	
 }
-
+html {
+	background: black;
+	font-size: 1.152rem !important;
+}
 
 view,
 scroll-view,
