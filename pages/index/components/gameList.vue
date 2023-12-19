@@ -30,12 +30,13 @@
     </scroll-view>
     <!-- GameList -->
     <view >
-      <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 0"/>
-      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 3"/>
-      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" v-if="id == 2 || id == 4 || id == 7"/>
+      <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 0"/>
+      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 3 || id ==7 || id == 2"/>
+      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 6 || id == 4 || id == 8"/>
       <MultiGameList  
         :gameId="id" 
-        :navIndex="navIndex" 
+        :navIndex="navIndex"  
+        :gamemenusparent="gamemenusparent"
         :gameMenus="gamemenus"
         @difference="difference" 
         v-if="id == 5 || id == 1 || id == 9"/>

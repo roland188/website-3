@@ -50,6 +50,7 @@
     props: {
       gameList: Array,
       navIndex: Number,
+      gamemenusparent: [Object, Array],
     },
     data() {
       return {

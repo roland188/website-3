@@ -175,17 +175,15 @@ export default {
       // imgHost
       let imgHost = this.$server.getImgHost();
       // #ifdef APP-PLUS
-      this.$config.imgHost = 'https://715337.com/file';
+      this.$config.imgHost = imgHost; //'https://715337.com/file';
       // #endif
 
       // #ifdef  H5
       this.$config.imgHost =
-        process.env.NODE_ENV === "development"
-          ? this.$server.getImgHost()
-          : window.location.origin + "/file";
-      this.$config.imgHost = 'https://715337.com/file';
-      this.$config.clientCode = 'ff10'; //window.clientCode;
-      this.$config.childCode = 'ff10'; //window.childCode;
+        process.env.NODE_ENV === "development" ? this.$server.getImgHost() : window.location.origin + "/file";
+      // this.$config.imgHost = 'https://715337.com/file';
+      this.$config.clientCode = window.clientCode;
+      this.$config.childCode = window.childCode;
       this.$config.customerServiceStatus = window.customerServiceStatus;
       const theme = window.theme;
       if (theme) {

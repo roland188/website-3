@@ -49,6 +49,7 @@
     props: {
       gameList: Array,
       navIndex: Number,
+      gamemenusparent: [Object, Array],
     },
     data() {
       return {
@@ -75,12 +76,7 @@
   </script>
   
   <style lang="less" scoped>
-  ::v-deep  .secondList .uni-scroll-view-content{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20upx 24upx;
-      align-content: flex-start;
-    }
+  
   .secondList {
     background: url("../../static/image/indexImg/hot-back.png");
     .banner-img {

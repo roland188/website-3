@@ -1,7 +1,7 @@
 const config = {};
 
 // 接口服务器
-config.host = "https://715337.com/xxa";
+config.host = "https://m.tc20009.com/xxa";
 // 页面服务器
 config.codeUrl = "";
 // 下载地址
