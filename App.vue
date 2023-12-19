@@ -184,8 +184,8 @@ export default {
           ? this.$server.getImgHost()
           : window.location.origin + "/file";
       this.$config.imgHost = 'https://715337.com/file';
-      this.$config.clientCode = window.clientCode;
-      this.$config.childCode = window.childCode;
+      this.$config.clientCode = 'ff10'; //window.clientCode;
+      this.$config.childCode = 'ff10'; //window.childCode;
       this.$config.customerServiceStatus = window.customerServiceStatus;
       const theme = window.theme;
       if (theme) {
@@ -366,7 +366,10 @@ export default {
       return new Promise((resolve) => {
         let clientItem = "";
         let skinCode = "";
-
+		window.childCode = 'ff10';
+		window.clientCode = 'ff10';
+		window.childItem = 'ff10';
+		window.theme = 'a053';
         // #ifdef H5
         clientItem = window.childCode;
         skinCode = window.theme;
@@ -377,7 +380,7 @@ export default {
         skinCode = this.$config.theme;
         // #endif
 
-        console.log('apage list ', host);
+        console.log('apage list ', this.$config.clientCode);
         // 请求体
         const req = {
           url: host + "/longm/api/v1/domain/pageList",
