@@ -229,7 +229,6 @@ export default {
       .bgicon {
         width: 2.185rem;
         height: 2.185rem;
-        margin-right: 10upx;
         margin-top: 6upx;
         .img {
           width: 100%;

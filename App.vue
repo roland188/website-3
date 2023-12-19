@@ -167,6 +167,11 @@ export default {
       if (getConfigHost) {
         this.$config.host = getConfigHost;
       }
+      
+      window.childCode = 'ff10';
+      window.clientCode = 'ff10';
+      window.childItem = 'ff10';
+      window.theme = 'a053';
 
       // codeUrl
       const codeUrl = this.$server.getCodeUrl();
@@ -175,13 +180,12 @@ export default {
       // imgHost
       let imgHost = this.$server.getImgHost();
       // #ifdef APP-PLUS
-      this.$config.imgHost = imgHost; //'https://715337.com/file';
+      this.$config.imgHost = imgHost; //'https://m.tc20009.com/file';
       // #endif
 
       // #ifdef  H5
-      this.$config.imgHost =
-        process.env.NODE_ENV === "development" ? this.$server.getImgHost() : window.location.origin + "/file";
-      // this.$config.imgHost = 'https://715337.com/file';
+      this.$config.imgHost = process.env.NODE_ENV === "development" ? this.$server.getImgHost() : window.location.origin + "/file";
+      // this.$config.imgHost = 'https://m.tc20009.com/file';
       this.$config.clientCode = window.clientCode;
       this.$config.childCode = window.childCode;
       this.$config.customerServiceStatus = window.customerServiceStatus;
@@ -280,8 +284,8 @@ export default {
     async forDataJson(list) {
       let result;
       for (let i = 0; i < list.length; i++) {
-        // result = await this.forDataJsonReq(list[i]);
-        result = await this.forDataJsonReq('https://715337.com/xxa');
+        result = await this.forDataJsonReq(list[i]);
+        // result = await this.forDataJsonReq('https://715337.com/xxa');
         if (result) {
           // 获取到了配置
           break;
@@ -364,10 +368,6 @@ export default {
       return new Promise((resolve) => {
         let clientItem = "";
         let skinCode = "";
-		window.childCode = 'ff10';
-		window.clientCode = 'ff10';
-		window.childItem = 'ff10';
-		window.theme = 'a053';
         // #ifdef H5
         clientItem = window.childCode;
         skinCode = window.theme;

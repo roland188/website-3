@@ -640,10 +640,10 @@ export default {
       })
       // 热门
       let hotList = {
-        name: 'Game Hot',
+        name: this.$t('热门'),
         id: 0,
-        menuIconActiveApp: require("../../static/image/indexImg/menu-icon0.png"),
-        menuIconApp: require("../../static/image/indexImg/menu-icon0.png"),
+        menuIconActiveApp: require("../../static/image/indexImg/menu-icon0-active.svg"),
+        menuIconApp: require("../../static/image/indexImg/menu-icon0.svg"),
         children: this.hotList
       }
       arrLeft.unshift(hotList)
