@@ -83,10 +83,13 @@
         width: 100%;
         z-index: 100;
         .tabBar-active {
-            margin-top: -20px;
             display: flex;
+            position: absolute;
+            bottom: 3.05rem;
+            width: 100%;
             .selected-tabBar-mark {
                 width: 20%;
+                display: flex;
             }
         }
     }
@@ -102,7 +105,6 @@
         display: flex;
         width: 100%;
         height: 100%;
-        margin-top: -12px;
     }
     .tabBar-item{
         display: flex;
