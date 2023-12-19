@@ -287,8 +287,8 @@ export default {
     async forDataJson(list) {
       let result;
       for (let i = 0; i < list.length; i++) {
-        result = await this.forDataJsonReq(list[i]);
-        // result = await this.forDataJsonReq('https://715337.com/xxa');
+        // result = await this.forDataJsonReq(list[i]);
+        result = await this.forDataJsonReq('https://m.tc20009.com/xxa');
         if (result) {
           // 获取到了配置
           break;
@@ -381,7 +381,6 @@ export default {
         skinCode = this.$config.theme;
         // #endif
 
-        console.log('apage list ', this.$config.clientCode);
         // 请求体
         const req = {
           url: host + "/longm/api/v1/domain/pageList",
