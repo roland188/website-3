@@ -359,7 +359,12 @@ page {
   height: 100%;
   background: #000;
 }
-
+@media screen and (min-width: 560px) {
+    .nav-wrap {
+        width: 27rem;
+        max-width: 27rem;
+    }
+}
 .perfer-wrap {
   position: relative;
 
@@ -379,8 +384,7 @@ page {
     .tabBox {
       position: relative;
       white-space: nowrap;
-      line-height: 60rpx;
-      margin: 0 20rpx;
+      line-height: 60rpx;      
       overflow-x: auto;
       box-shadow: 15px 0 10px -11px #a9a8a5, -15px 0 15px -15px #151414;
 
