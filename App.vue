@@ -12,6 +12,8 @@ export default {
     };
   },
   onLaunch() {
+    
+    this.$server.clearAll();
     // #ifdef APP-PLUS
     plus.screen.lockOrientation("portrait-primary");
     // #endif
@@ -72,6 +74,7 @@ export default {
     }, 0);
   },
   onShow() {
+    
     // #ifdef H5
     // 获取样式文件
     this.$config.theme = "a001";
@@ -162,12 +165,12 @@ export default {
     },
     // 初始化配置
     initConfig() {
+      
       // host
       const getConfigHost = this.$server.getConfigHost();
       if (getConfigHost) {
         this.$config.host = getConfigHost;
       }
-      
       window.childCode = 'ff10';
       window.clientCode = 'ff10';
       window.childItem = 'ff10';
