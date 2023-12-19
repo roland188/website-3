@@ -32,7 +32,7 @@
                 <view class="bgicon">
                   <image
                     class="img"
-                    :src="$config.getImgUrl(item.menuIconApp)"
+                    :src="$config.getImgUrl(item.imgUrlApp)"
                     mode="acpectFit"
                     alt=""
                   ></image>
