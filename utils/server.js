@@ -39,9 +39,9 @@ server.request = function (url, data = null, callback = null, isLoading = true, 
     // }
     // console.log(config.host + url)
    let lang = {
-    'vi': 'vi-VN,vi;q=0.9',
-    'en': 'en-CN,en;q=0.9',
-    'pt': 'pt-BR,pt;q=0.9'
+    'vi': 'vi-VN',
+    'en': 'en-CN',
+    'pt': 'pt-BR'
    }       
     var req = {
         url: config.host + url,
