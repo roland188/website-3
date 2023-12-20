@@ -898,6 +898,7 @@ export default {
     },
     // 打开左侧菜单
     openLeftMenu() {
+      console.log('AAA');
       this.$refs.leftmenus.isShow = true;
     },
     // 进入游戏

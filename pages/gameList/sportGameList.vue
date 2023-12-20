@@ -1,14 +1,11 @@
 <!-- 游戏列表 -->
 <template>
       <!-- 右侧列表 -->
-    <view class="secondList">
+    <view class="gameList">
       <view v-if="gameList.length > 0">
         <block v-for="(item, index) in gameList" :key="index">
           <!-- :class="[1,2,4,6].includes(id) ? 'game1' : ''"  -->
-            <view
-            class="game"
-                :class="'game1'"
-            >
+
             <view
                 class="inner inner1"
                 @tap="difference(gamemenusparent, item, navIndex, index)"
@@ -25,9 +22,6 @@
                 mode="widthFix"
                 alt=""
                 ></image>
-
-                <view class="title">{{ item.name }}</view>
-            </view>
             </view>
         </block>
       </view>
@@ -79,27 +73,16 @@
   
   <style lang="less" scoped>
   
-    .secondList {
+    .gameList {
       position: relative;
       // padding-left: 25%;
       // max-height: 784upx;
       overflow-y: auto;
-      .game {
-        flex: 1;
-        // height: 226upx;
-        margin-bottom: 2%;
-        padding: 0.1875rem 0.625rem;
-        overflow: hidden;
-        border-radius: 25upx;
-        // background: url("../../static/image/indexImg/game-bg.png") no-repeat center/contain;
-        .inner {
+      .inner {
+          padding: 0.1875rem 0.625rem;
           position: relative;
-          width: 100%;
-          padding-top: 100%;
+          margin-bottom: 0.3125rem;
           .img {
-            position: absolute;
-            left: 0;
-            top: 0;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -119,7 +102,6 @@
             color: white;
           }
         }
-      }
       .search-none {
         width: 100%;
         color: #58576E;

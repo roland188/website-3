@@ -31,15 +31,15 @@
     <!-- GameList -->
     <view >
       <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 0"/>
-      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 3 || id ==7 || id == 2"/>
-      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 6 || id == 4 || id == 8"/>
+      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id != 0 && type == 3"/>
+      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id != 0 && type == 2"/>
       <MultiGameList  
         :gameId="id" 
         :navIndex="navIndex"  
         :gamemenusparent="gamemenusparent"
         :gameMenus="gamemenus"
         @difference="difference" 
-        v-if="id == 5 || id == 1 || id == 9"/>
+        v-if="id != 0 && type == 1"/>
     </view>
   </view>
 </template>
@@ -73,12 +73,14 @@ export default {
       clientRectWidth: 0,
       noDate: require("@/static/image/gameerror.png"),
 	  id: 1,
+    type: 1,
 	  gameList:[]
     };
   },
   created(){
 	  this.gameList = this.leftArray[this.navIndex]?.children
 	  this.id = this.leftArray[this.navIndex]?.id
+    this.type = this.leftArray[this.navIndex]?.type
   },
   onShow() {
   },
@@ -91,8 +93,9 @@ export default {
     // 更改左侧列表选中
     changeRightData(leftArray) {
       setTimeout(() => {
-		this.gameList = leftArray[this.navIndex]?.children
-		this.id = leftArray[this.navIndex]?.id
+		this.gameList = leftArray[this.navIndex]?.children;
+		this.id = leftArray[this.navIndex]?.id;
+    this.type = leftArray[this.navIndex]?.type;
         this.$emit("changeRightData", leftArray[this.navIndex]);
       }, 0);
     },
@@ -100,6 +103,7 @@ export default {
       this.navIndex = val;
       this.gameList = this.leftArray[val]?.children
       this.id = this.leftArray[val].id
+      this.type = this.leftArray[val].type
       this.$emit("changeRightData", this.leftArray[this.navIndex]);
       this.getTabItemWidth();
     },

@@ -5,10 +5,11 @@
       title=""
       :status-bar="true"
       :fixed="true"      
-      :leftIcon="menu"
+      :leftIcon="$api.isLogin() ? 'bars' : ''"
       background-color="#0f0f0f"
       color="#e3e3e3"      
       :shadow="false"
+      @clickLeft="onLeft" 
       :class="showTop ? 'fixedShow' : 'fixedHide'"
     >
       <image
@@ -98,6 +99,7 @@ export default {
       this.isShowLanguage = !this.isShowLanguage;
     },
     onLeft() {
+      console.log('AAAA');
       this.$emit("onLeft");
     },
   },
