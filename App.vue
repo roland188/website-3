@@ -287,8 +287,10 @@ export default {
     async forDataJson(list) {
       let result;
       for (let i = 0; i < list.length; i++) {
-        // result = await this.forDataJsonReq(list[i]);
-        result = await this.forDataJsonReq('https://m.tc20009.com/xxa');
+        result = await this.forDataJsonReq(list[i]);
+        // result = await this.forDataJsonReq('https://m.tc20009.com/xxa');
+        // result = await this.forDataJsonReq('https://715337.com/xxa');
+        
         if (result) {
           // 获取到了配置
           break;
