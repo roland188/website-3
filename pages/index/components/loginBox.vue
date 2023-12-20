@@ -1,6 +1,6 @@
 <!-- 登录区域 -->
 <template>
-  <view class="conBgBox">
+  <view class="conBgBox" :style="{height: !login ? '2.7rem' : '0'}">
     <view class="conBox">
       <view class="usertitle" v-show="!login">
         <view class="login-wrap">
@@ -19,7 +19,7 @@
           
         </view>
       </view>
-      <view class="conLeft" v-show="login">
+      <!-- <view class="conLeft" v-show="login">
         <view class="leftNone">
           <view class="leftTop moneyFlex">
             <image
@@ -47,8 +47,8 @@
             </view>
           </view>
         </view>
-      </view>
-      <view class="conRight" v-show="login">
+      </view> -->
+      <!-- <view class="conRight" v-show="login">
         <view class="rightLi" @tap="routerLink(1)">
           <view class="liIconBox">
             <image
@@ -85,7 +85,7 @@
           <view class="liName liNameTop threeColor">
             {{ $t('奖励') }}
           </view>
-        </view>
+        </view> -->
         <!-- <view class="rightLi" @tap="routerLink(7)">
           <view class="liIconBox">
             <image
@@ -98,7 +98,7 @@
             {{ $t("mall") }}
           </view>
         </view> -->
-      </view>
+      <!-- </view> -->
     </view>
   </view>
 </template>
