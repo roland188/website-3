@@ -4,7 +4,8 @@
     <uni-nav-bar
       title=""
       :status-bar="true"
-      :fixed="true"
+      :fixed="true"      
+      :leftIcon="menu"
       background-color="#0f0f0f"
       color="#e3e3e3"      
       :shadow="false"
