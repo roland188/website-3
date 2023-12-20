@@ -1,11 +1,10 @@
-
 .DS_Store
 /unpackage/*
 !/unpackage/debug
 /node_modules/
 /dist
 package-lock.json
-# /static/url.js
+/static/url.js
 # local env files
 .env.local
 .env.*.local

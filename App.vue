@@ -1,8 +1,7 @@
-
 <script>
 import Vue from "vue";
 import Cookie from "./utils/cookie.js";
-import { setLang, setTabbarItem } from "@/i18n/index";
+import { setLang } from "@/i18n/index";
 export default {
   data() {
     return {
@@ -12,8 +11,6 @@ export default {
     };
   },
   onLaunch() {
-    
-    this.$server.clearAll();
     // #ifdef APP-PLUS
     plus.screen.lockOrientation("portrait-primary");
     // #endif
@@ -25,31 +22,29 @@ export default {
     // #ifdef H5
     const serveLang = uni.getStorageSync("lang") || window.locale || "vi";
     setLang(serveLang);
-    if (location.href.includes("platformMjb=ios")) {
-      window.isMaskApp = true;
-      this.$cache.set("platformMjb", 1);
-    }
-    if (
-      navigator.userAgent.endsWith("platform=ios") ||
-      this.$cache.get("platformMjb")
-    ) {
-      window.isMaskApp = true;
-      window.oldOpen = window.open;
-      window.open = (url) => {
-        if (url && !url.endsWith("wait/wait")) location.href = url;
-        else {
-          const win = {
-            close: () => (win.location = {}),
-            location: window.location,
-          };
-          return win;
-        }
-      };
-    }
+	if(location.href.includes('platformMjb=ios')){
+		window.isMaskApp = true
+		this.$cache.set('platformMjb',1)
+	}
+	if (navigator.userAgent.endsWith('platform=ios') || this.$cache.get('platformMjb')) {
+		window.isMaskApp = true
+		window.oldOpen = window.open
+		window.open = (url) => {
+			if(url && !url.endsWith('wait/wait')) location.href = url
+			else {
+			const win = {
+				close:() => win.location = {},
+				location:window.location
+			}
+				return win
+			}
+		}
+	}
     // #endif
-
     uni.hideTabBar();
-    
+    // #ifdef APP-PLUS
+    plus.screen.lockOrientation("portrait-primary");
+    // #endif
     // 获取服务配置
     setTimeout(() => {
       // 设置语言
@@ -74,9 +69,9 @@ export default {
     }, 0);
   },
   onShow() {
-    
     // #ifdef H5
     // 获取样式文件
+    this.$config.theme = "a001";
     require("@/common/theme/" + (this.$config.theme || "a001") + ".css");
     this.iosChrome();
     // #endif
@@ -95,8 +90,8 @@ export default {
     this.interval = setInterval(() => {
       this.getMaintain();
     }, interval);
-    setTabbarItem();    
-    uni.hideTabBar({});
+    // setTabbarItem();
+	 uni.hideTabBar({});
   },
   onHide() {},
   methods: {
@@ -112,7 +107,6 @@ export default {
       // #endif
       uni.request({
         // url: 'https://m.bets888806.com/clientMaintain/getClientMaintain',
-        // url: 'https://www.561219.com/clientMaintain/getClientMaintain',
         url: maintainUrl,
         method: "post",
         header: {
@@ -148,28 +142,26 @@ export default {
             this.isMaintain = true;
             // #endif
           } else {
-
-      //#ifdef APP-PLUS
-      if (this.isMaintain) {
-        uni.switchTab({
-          url: "/pages/index/index",
-        });
-      }
-      this.isMaintain = false;
-      //#endif
-
+            // #ifdef APP-PLUS
+            if (this.isMaintain) {
+              uni.switchTab({
+                url: "/pages/index/index",
+              });
+            }
+            this.isMaintain = false;
+            // #endif
           }
         },
       });
     },
     // 初始化配置
     initConfig() {
-      
       // host
       const getConfigHost = this.$server.getConfigHost();
       if (getConfigHost) {
         this.$config.host = getConfigHost;
       }
+
       // codeUrl
       const codeUrl = this.$server.getCodeUrl();
       this.$config.codeUrl = codeUrl;
@@ -177,15 +169,14 @@ export default {
       // imgHost
       let imgHost = this.$server.getImgHost();
       // #ifdef APP-PLUS
-      this.$config.imgHost = imgHost; //'https://m.tc20009.com/file';
+      this.$config.imgHost = imgHost;
       // #endif
 
       // #ifdef  H5
-      this.$config.imgHost = process.env.NODE_ENV === "development" ? this.$server.getImgHost() : window.location.origin + "/file";
-      // this.$config.imgHost = 'https://m.tc20009.com/file';
+      this.$config.imgHost = process.env.NODE_ENV === 'development' ? this.$server.getImgHost() : window.location.origin + "/file";
       this.$config.clientCode = window.clientCode;
       this.$config.childCode = window.childCode;
-      this.$config.customerServiceStatus = window.customerServiceStatus;
+      this.$config.customerServiceStatus =  window.customerServiceStatus
       const theme = window.theme;
       if (theme) {
         this.$config.theme = theme;
@@ -281,8 +272,7 @@ export default {
     async forDataJson(list) {
       let result;
       for (let i = 0; i < list.length; i++) {
-        // result = await this.forDataJsonReq(list[i]);
-        result = await this.forDataJsonReq('https://m.tc20009.com/xxa');
+        result = await this.forDataJsonReq(list[i]);
         if (result) {
           // 获取到了配置
           break;
@@ -291,10 +281,10 @@ export default {
       // 获取配置信息失败
       if (!result) {
         uni.showModal({
-          title: this.$t("提示"),
-          content: this.$t("服务器错误，请联系客服"),
-          confirmText: this.$t("确定"),
-          cancelText: this.$t("取消"),
+          title: this.$t('提示'),
+          content: this.$t('服务器错误，请联系客服'),
+          confirmText: this.$t('确定'),
+          cancelText: this.$t('取消'),
           showCancel: false,
         });
         return;
@@ -312,15 +302,12 @@ export default {
             break;
           case 2: // 图片
             // #ifdef H5
-            this.$config.imgHost =
-              process.env.NODE_ENV === "development"
-                ? item.domain
-                : window.location.origin + "/file";
+            this.$config.imgHost = process.env.NODE_ENV === 'development' ? item.domain :  window.location.origin + "/file";
             // #endif
             // #ifdef APP-PLUS
             this.$config.imgHost = item.domain;
             // #endif
-            this.$server.setImgHost(item.domain);
+			 this.$server.setImgHost(item.domain);
             break;
           case 3: // 上传下载
             this.$config.dowUrl = item.domain + "/";
@@ -361,10 +348,10 @@ export default {
     },
     // 获取配置信息请求
     forDataJsonReq(host) {
-      // host = ''
       return new Promise((resolve) => {
         let clientItem = "";
         let skinCode = "";
+
         // #ifdef H5
         clientItem = window.childCode;
         skinCode = window.theme;
@@ -425,7 +412,7 @@ export default {
         } catch (e) {
           let selft = this;
           uni.showToast({
-            title: selft.$t("获取维护信息失败"),
+            title: selft.$t('获取维护信息失败'),
             icon: "none",
           });
         }
@@ -466,12 +453,12 @@ export default {
         if (err) {
           uni.showToast({
             icon: "none",
-            title: selft.$t("获取维护信息失败"),
+            title: selft.$t('获取维护信息失败'),
           });
           return;
         }
         // 邀请码
-        res.remark && sessionStorage.setItem("inviteCode", res.remark);
+        res.remark && sessionStorage.setItem("inviteCode",res.remark);
         this.$server.setClientCodeRes(res);
         this.$server.setCustomerService(res.customerUrl);
       });
