@@ -70,6 +70,7 @@
 		}
 		// if (!g && o.invite.length) sessionStorage.setItem("inviteCode", JSON.stringify(o.invite));
 		o.host = "https://715337.com/xxa"
+        // o.host = "https://m.tc20009.com/xxa"
 		localStorage.setItem("host", o.host);
 		localStorage.setItem("domainName", o.domainName);
 		localStorage.setItem("statistics", o.statistics);
