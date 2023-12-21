@@ -56,8 +56,7 @@
                 <text class="f20 textShadow">{{ item.name }} </text>
               </view>
               <view class="text-detail-center">
-                {{ $t("Rp")
-                }}<text class="f28">{{ item.amount }}</text>
+              <text class="f28">{{ item.amount }}</text>
               </view>
               <view class="text-detail-down">
                 <view class="left-deso flex-f-d-c">

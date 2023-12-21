@@ -48,7 +48,7 @@
           </view>
           <view class="record-body">
             <view class="deposit-money">
-              {{ $t('存款金额：') }}{{ $t("Rp") }}{{
+              {{ $t('存款金额：') }}{{
                 filterNumber(item.depositAmount)
               }}
             </view>
@@ -67,12 +67,12 @@
             </view>
             <view class="interests-row">
               <view
-                >{{ $t('利息：') }}{{ $t("Rp") }}{{
+                >{{ $t('利息：') }}{{
                   filterNumber(item.interest)
                 }}</view
               >
               <view
-                >{{ $t('本利总额：') }}{{ $t("Rp") }}
+                >{{ $t('本利总额：') }}
                 {{ getSum(item.depositAmount, item.interest) }}</view
               >
             </view>

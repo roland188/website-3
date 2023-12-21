@@ -43,7 +43,6 @@
                 mode="aspectFit"
                 class="rmb-size"
               ></image> -->
-              {{ $t("Rp") }}
               <text class="moeny">{{ userMoney }}</text>
             </view>
           </view>
@@ -65,7 +64,7 @@
                   v-if="item.operation"
                   :class="[item.totalMoney == 0 ? 'game-money-text' : '']"
                 >
-                  {{ $t("Rp") }}{{ item.totalMoney.toFixed(2) }}</text
+                 {{ item.totalMoney.toFixed(2) }}</text
                 >
                 <text
                   class="maintaining maintainBackground"

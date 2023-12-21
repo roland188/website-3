@@ -7,7 +7,6 @@
 		</cu-custom>
 		<view class="header">
 			<view class="amount recordTextOne">
-				<i>{{ $t("Rp") }}</i>
 				<text class="recordTextOne">{{paragraphAmount}}</text>
 			</view>
 			<view class="flexLayout" style="height: 104rpx;line-height: 104rpx;padding: 0 30rpx;">

@@ -9,7 +9,6 @@
 			<view class="amount">
 				<i v-if="smallBetAmount==0">{{ $t('待结算') }}</i>
 				<i v-if="smallBetAmount==1">{{ $t('已结算') }}</i>
-				<!-- <text class="recordTextOne">{{ $t("Rp") }}{{betAmount.toFixed(2)}}</text> -->
 			</view>
 			<view class="flexLayout headerHeight">
 				<text class="leftText">{{ $t('订单编号') }}</text>
@@ -31,25 +30,25 @@
 			</view>
 			<view>
 				<text class="leftText">{{ $t('投注金额') }}</text>
-				<text class="recordTextOne">{{ $t("Rp") }}{{betAmount}}</text>
+				<text class="recordTextOne">{{betAmount}}</text>
 			</view>
 			<view>
 				<text class="leftText">{{ $t('有效金额') }}</text>
-				<text class="recordTextOne">{{ $t("Rp") }}{{betAmountValid}}</text>
+				<text class="recordTextOne">{{betAmountValid}}</text>
 			</view>
 			<view>
 				<text class="leftText">{{ $t('有效投注') }}</text>
-				<text class="recordTextOne" v-if="smallBetAmount==1">{{ $t("Rp") }}{{betAmountValid}}</text>
+				<text class="recordTextOne" v-if="smallBetAmount==1">{{betAmountValid}}</text>
 				<text class="recordTextOne" v-else>--</text>
 			</view>
 			<view>
 				<text class="leftText">{{ $t('派奖金额') }}</text>
-				<text class="recordTextOne" v-if="smallBetAmount==1">{{ $t("Rp") }}{{payoff}}</text>
+				<text class="recordTextOne" v-if="smallBetAmount==1">{{payoff}}</text>
 				<text class="recordTextOne" v-else>--</text>
 			</view>
 			<view>
 				<text class="leftText">{{ $t('盈亏金额') }}</text>
-				<text class="recordTextOne" v-if="smallBetAmount==1">{{ $t("Rp") }}{{winLoss}}</text>
+				<text class="recordTextOne" v-if="smallBetAmount==1">{{winLoss}}</text>
 				<text class="recordTextOne" v-else>--</text>
 			</view>
 			<view>
