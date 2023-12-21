@@ -166,7 +166,7 @@
 
               <view class="leftBottom moneyTop">
                 <view class="money indexMoneyColor">
-                  <text class="textM">{{ $t("Rp") }}{{ dataJson.balance || "0.00" }}</text>
+                  <text class="textM">{{ dataJson.balance || "0.00" }}</text>
                 </view>
               </view>
             </view>

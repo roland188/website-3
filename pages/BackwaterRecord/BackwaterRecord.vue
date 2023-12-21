@@ -20,10 +20,10 @@
           </view>
           <view class="money">
             <text class="text">{{ $t('流水') }}</text>
-            <text class="text rmb">{{ $t("Rp") }}</text>
+            <text class="text rmb"></text>
             <text class="money-text">{{ item.effectiveBet }}</text>
             <text class="text">{{ $t('返水') }}</text>
-            <text class="text rmb">{{ $t("Rp") }}</text>
+            <text class="text rmb"></text>
             <text class="money-text">{{ item.rebateAmount }}</text>
           </view>
         </view>
@@ -63,12 +63,12 @@
           <view class="title"> {{ $t('返水金额') }} </view>
           <view class="input-box">
             <view class="">
-              <text class="rmb">{{ $t("Rp") }}</text>
+              <text class="rmb"></text>
               <input type="number" v-model="minMoney" class="uni-input time" :placeholder="$t('最低金额')" />
             </view>
             <view class="zhi"> {{ $t('至') }} </view>
             <view class="">
-              <text class="rmb">{{ $t("Rp") }}</text>
+              <text class="rmb"></text>
               <input type="number" v-model="maxMoney" class="uni-input time" :placeholder="$t('最高金额')" />
             </view>
           </view>

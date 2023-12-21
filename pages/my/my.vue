@@ -41,7 +41,7 @@
           ></image>
         </view>
         <view class="userMoney">
-          <text class="currency">{{ $t("Rp") }} </text> {{ userMoney }}
+          {{ userMoney }}
         </view>
       </view>
       <view class="letter-wrap" v-if="islogin" @tap="handelStation">
@@ -120,7 +120,8 @@
           <view style="color: #c2c2c2">
             {{ $t('累计返水：')
             }}{{ userfan.rebateAmount ? rebateAmount : "0.00"
-            }}{{ $t('元') }}
+            }}
+            <!-- {{ $t('元') }} -->
             <image
               src="../../static/image/r2.png"
               class="refresh-img"

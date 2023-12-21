@@ -8,12 +8,12 @@
 		</cu-custom>
 		<view class="combined" v-if="topsVal">
 			<view class="combinedOne">
-				<view>{{ $t('总投注') }}：{{ $t("Rp") }}{{totalBet}}</view>
-				<view>{{ $t('总有效投注') }}：{{ $t("Rp") }}{{effective}}</view>
+				<view>{{ $t('总投注') }}：{{totalBet}}</view>
+				<view>{{ $t('总有效投注') }}：{{effective}}</view>
 			</view>
 			<view class="combinedTwo">
-				<view>{{ $t('总派彩') }}：{{ $t("Rp") }}{{distributed}}</view>
-				<view>{{ $t('总盈亏金额') }}：{{ $t("Rp") }}{{profit}}</view>
+				<view>{{ $t('总派彩') }}：{{distributed}}</view>
+				<view>{{ $t('总盈亏金额') }}：}{{profit}}</view>
 			</view>
 		</view>
 		<re-Cord ref="changeData" :parameters="parameterData" :tops="topsVal" @tops="tops"></re-Cord>
