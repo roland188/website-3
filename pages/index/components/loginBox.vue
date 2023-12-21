@@ -236,7 +236,7 @@ export default {
 <style lang="less" scoped>
 // 功能登录区域
 .conBgBox {
-  height: 2.7rem;
+  height: 75upx;
   display: flex;
   align-items: center;
   .conBox {
@@ -265,7 +265,7 @@ export default {
           font-weight: bold;
           text-align: center;
           align-items: center;
-          font-size: .8325rem;
+          font-size: 23upx;
           display: flex;
           font-weight: 500;
           justify-content: center;

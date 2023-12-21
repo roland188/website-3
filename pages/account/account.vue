@@ -1046,7 +1046,7 @@ $text-color: #484440;
 
 .add-card-view {
   position: fixed;
-  bottom: 0rem;
+  bottom: 0;
   background: var(--pageBackground);
   width: 100%;
   height: 60px;

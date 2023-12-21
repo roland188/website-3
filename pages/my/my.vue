@@ -1321,10 +1321,10 @@ export default {
       color: #fff;
       background-color: #fb5954;
       border-radius: 30upx;
-      font-size: 0.6rem;
+      font-size: 16upx;
       display: inline-block;
-      margin-right: 0.5rem;
-      padding: 0.08rem 0.5rem;
+      margin-right: 13upx;
+      padding: 2upx 13upx;
     }
 
     image {

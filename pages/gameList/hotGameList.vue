@@ -77,9 +77,9 @@
       width: 100%;
     }
     .gameItem {
-      padding: 0.1875rem 0.625rem;
+      padding: 5upx 17upx;
       position: relative;
-      margin-bottom: 0.3125rem;
+      margin-bottom: 8upx;
       .img {
         width: 100%;
         height: 100%;
@@ -90,9 +90,9 @@
         position: absolute;
         right: 9%;
         bottom: 17%;
-        width: 8.125rem;
-        height: 2.3125rem;
-        font-size: .8125rem;
+        width: 225upx;
+        height: 64upx;
+        font-size: 22upx;
         display: -webkit-box;
         display: flex;
         justify-content: center;
@@ -109,15 +109,15 @@
       justify-content: center;
 
       .title {
-        font-size: 1.25rem;
+        font-size: 34upx;
         align-items: center;
-        margin-bottom: 0.625rem;
-        padding: 0 0.9375rem;
+        margin-bottom: 17upx;
+        padding: 0 26upx;
       }
       .content {
-        padding: 0 0.9375rem 5.625rem;
-        font-size: .875rem;
-        line-height: 1.875rem;
+        padding: 0 26upx 156upx;
+        font-size: 24upx;
+        line-height: 52upx;
       }
     }
   }

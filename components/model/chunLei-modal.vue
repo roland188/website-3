@@ -948,13 +948,13 @@
 		background: #FFFFFF;
 		border-radius: 16upx;
 		overflow: hidden;
-		// padding-bottom: 1rem;
+		// padding-bottom: 27upx;
 
 		.title_bg {
 			// background: linear-gradient(-90deg, rgba(246, 216, 163, 1) 0%, rgba(254, 253, 249, 1) 100%);
 			border-radius: 20px 20px 0px 0px;
 			text-align: center;
-			line-height: 2.3rem;
+			line-height: 63upx;
 		}
 
 		.content {
@@ -965,24 +965,24 @@
 
 			.fan-money {
 				// display: block;
-				font-size: 1.5rem;
+				font-size: 41upx;
 				font-weight: 600;
 				color: #1D1717;
 			}
 
 			.fan-num {
 				display: block;
-				font-size: 0.85rem;
+				font-size: 23upx;
 				color: #1D1717;
 			}
 
 			.fan-text {
 				font-weight: 500;
 				color: #1D1717;
-				font-size: 0.82rem;
-				/* margin: 1rem 2rem; */
+				font-size: 22upx;
+				/* margin: 27upx 55upx; */
 				display: block;
-				margin: 1.5rem;
+				margin: 41upx;
 			}
 		}
 
@@ -994,7 +994,7 @@
 				width: 80%;
 				// background: linear-gradient(90deg, rgba(240, 193, 113, 1) 0%, rgba(243, 218, 158, 1) 100%);
 				// margin-left: 10%;
-				line-height: 2rem;
+				line-height: 55upx;
 				border-left: 1px solid #f4f4f4;
 			}
 
@@ -1198,7 +1198,7 @@
 			}
 
 			.vip-table-conent {
-				padding: 0.7rem 1.1rem;
+				padding: 19upx 30upx;
 				background: #fff;
 				border-bottom-left-radius: 10px;
 				border-bottom-right-radius: 10px;
@@ -1220,7 +1220,7 @@
 					border: 1px solid #D6D0CA;
 					font-size: 9px;
 					vertical-align: middle;
-					padding: 0.2rem;
+					padding: 5upx;
 				}
 
 				.div-table .flex-grid .th {

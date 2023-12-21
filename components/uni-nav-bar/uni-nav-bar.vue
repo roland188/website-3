@@ -172,8 +172,8 @@ $nav-height: 52px;
 
 @media screen and (min-width: 560px) {
   .uni-navbar__content {
-    width: 27rem;
-    max-width: 27rem;
+    width: 750upx;
+    max-width: 750upx;
   }
 }
 

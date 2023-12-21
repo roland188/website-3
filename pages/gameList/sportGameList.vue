@@ -90,7 +90,7 @@ export default {
   .inner {
     width: 95%;
     position: relative;
-    // margin-bottom: 0.3125rem;
+    // margin-bottom: 8upx;
   }
   .game1{
     width: 100%;
@@ -106,9 +106,9 @@ export default {
     position: absolute;
     right: 9%;
     bottom: 17%;
-    width: 8.125rem;
-    height: 2.3125rem;
-    font-size: 0.8125rem;
+    width: 225upx;
+    height: 64upx;
+    font-size: 22upx;
     display: -webkit-box;
     display: flex;
     justify-content: center;

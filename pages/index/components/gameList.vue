@@ -211,7 +211,7 @@ export default {
     position: relative;
     // height: 92upx;
     // margin-bottom: 16upx;
-    padding: 0.2rem 6upx;
+    padding: 5upx 6upx;
     background-color: #3a3a3a;
     white-space: nowrap;
     line-height: 60rpx;
@@ -221,18 +221,18 @@ export default {
       display: inline-flex;
       vertical-align: middle;
       /* height: 41px; */
-      line-height: 1.2rem;
+      line-height: 33upx;
       padding: 0 14px;
       color: #fff;
-      font-size: .8125rem;
+      font-size: 22upx;
       width: min-content;
       font-weight: 500;
       border-radius: 30px;      
       flex-direction: column;
       align-items: center;
       .bgicon {
-        width: 2.185rem;
-        height: 2.185rem;
+        width: 60upx;
+        height: 60upx;
         margin-top: 6upx;
         .img {
           width: 100%;
@@ -240,7 +240,7 @@ export default {
         }
       }
       span {
-        margin-top: 0.1rem;
+        margin-top: 2upx;
       }
     }
 

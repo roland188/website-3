@@ -13,7 +13,7 @@
       :class="showTop ? 'fixedShow' : 'fixedHide'"
     >
       <image
-        style="height: 1.875rem; margin: 0 auto"
+        style="height: 52upx; margin: 0 auto"
         :src="$config.platformLogo('logo')"
         mode="aspectFit"
       ></image>
@@ -123,11 +123,11 @@ export default {
 /* #endif */
 .languageImg_box {
   position: relative;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 36upx;
+  height: 36upx;
   .languageImg {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 36upx;
+    height: 36upx;
   }
 }
 .languageList {

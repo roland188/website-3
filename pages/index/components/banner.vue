@@ -158,10 +158,10 @@ export default {
 <style lang="less" scoped>
 .banner-wrap {
   width: 100%;
-  height: 8.125rem;
+  height: 225upx;
   position: relative;
   ::v-deep .screen-swiper {
-    min-height: 8.125rem;
+    min-height: 225upx;
   }
   .icon-arrow{
     position: absolute;

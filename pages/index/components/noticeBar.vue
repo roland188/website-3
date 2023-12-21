@@ -71,8 +71,8 @@ export default {
   box-sizing: border-box;  
   overflow: hidden;
   position: relative;
-  height: 1.875rem;
-  padding: 0 .6375rem;
+  height: 52upx;
+  padding: 0 17upx;
   display: flex;
   background: #222;
   align-items: center;
@@ -91,8 +91,8 @@ export default {
   .conGif {
     display: inline-block;
     vertical-align: middle;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 34upx;
+    height: 34upx;
     left: 5px;
     top: 2px;
     display: inline-block;

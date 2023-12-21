@@ -76,16 +76,16 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 3.3rem;
+        height: 91upx;
         background: linear-gradient(180deg,#363636,#121212);
-        border-top: 0.0625rem solid #db9c30;
+        border-top: 1upx solid #db9c30;
         position: fixed;
         width: 100%;
         z-index: 100;
         .tabBar-active {
             display: flex;
             position: absolute;
-            bottom: 3.05rem;
+            bottom: 84upx;
             width: 100%;
             .selected-tabBar-mark {
                 width: 20%;
@@ -96,8 +96,8 @@
 
     @media screen and (min-width: 560px) {
         .tabBar {
-            width: 27rem;
-            max-width: 27rem;
+            width: 750upx;
+            max-width: 750upx;
         }
     }
  
@@ -116,15 +116,15 @@
     }
     .rabLabel{
         position: relative;
-        font-size: .75rem;
+        font-size: 20upx;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         
         .tab-icon{
-            padding: .4375rem 0 0;
-            width: 1.5rem;
+            padding: 12upx 0 0;
+            width: 41upx;
         }
         .title {
             margin-top: -5px;

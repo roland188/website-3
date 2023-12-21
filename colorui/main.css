@@ -12,7 +12,7 @@
  ==================== */
 body {
 	background-color: #f1f1f1;
-	font-size: .75rem;
+	font-size: 20upx;
 	color: #333333;
 	font-family: Helvetica Neue, Helvetica, sans-serif;
 }
@@ -21,8 +21,8 @@ body {
 
 	body,
 	html {
-		width: 27rem;
-		max-width: 27rem;
+		width: 750upx;
+		max-width: 750upx;
 		margin: 0 auto;
 	}
 
@@ -30,7 +30,7 @@ body {
 }
 html {
 	background: black;
-	font-size: 1.152rem !important;
+	font-size: 27upx !important;
 }
 
 view,
@@ -1519,15 +1519,15 @@ button.cuIcon.lg {
 
 .cu-bar .action.border-title text[class*="bg-"]:last-child {
 	position: absolute;
-	bottom: -0.5rem;
-	min-width: 2rem;
+	bottom: -13upx;
+	min-width: 55upx;
 	height: 6upx;
 	left: 0;
 }
 
 .cu-bar .action.sub-title {
 	position: relative;
-	top: -0.2rem;
+	top: -5upx;
 }
 
 .cu-bar .action.sub-title text {
@@ -1538,11 +1538,11 @@ button.cuIcon.lg {
 .cu-bar .action.sub-title text[class*="bg-"]:last-child {
 	position: absolute;
 	display: inline-block;
-	bottom: -0.2rem;
+	bottom: -5upx;
 	border-radius: 6upx;
 	width: 100%;
-	height: 0.6rem;
-	left: 0.6rem;
+	height: 16upx;
+	left: 16upx;
 	opacity: 0.3;
 	z-index: 0;
 }
@@ -1550,8 +1550,8 @@ button.cuIcon.lg {
 .cu-bar .action.sub-title text[class*="text-"]:last-child {
 	position: absolute;
 	display: inline-block;
-	bottom: -0.7rem;
-	left: 0.5rem;
+	bottom: -19upx;
+	left: 13upx;
 	opacity: 0.2;
 	z-index: 0;
 	text-align: right;

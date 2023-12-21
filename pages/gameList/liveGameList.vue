@@ -84,13 +84,13 @@
       grid-template-columns: repeat(2,1fr);
       gap: 20upx 24upx;
       align-content: flex-start;
-      padding: .3125rem .625rem 0;
+      padding: 8upx 16upx 0;
       .game {
         flex: 1;
         // height: 226upx;
         margin-bottom: 2%;
-        padding-right: 0.3125rem;
-        padding-top: 0.3125rem;
+        padding-right: 8upx;
+        padding-top: 8upx;
         overflow: hidden;
         border-radius: 25upx;
         // background: url("../../static/image/indexImg/game-bg.png") no-repeat center/contain;
@@ -111,9 +111,9 @@
             position: absolute;
             right: 9%;
             bottom: 17%;
-            width: 8.125rem;
-            height: 2.3125rem;
-            font-size: .8125rem;
+            width: 225upx;
+            height: 64upx;
+            font-size: 22upx;
             display: -webkit-box;
             display: flex;
             justify-content: center;

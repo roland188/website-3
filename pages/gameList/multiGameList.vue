@@ -320,30 +320,30 @@ export default {
   .game-type {
     .switch {
       width: 100%;
-      padding: 0.75rem 0.625rem;
+      padding: 20upx 17upx;
       .game-type-switch {
         display: flex;
         width: 100%;
         color: white;
-        font-size: 0.8125rem;
-        border: 0.0625rem solid #db9c30;
-        border-radius: 0.25rem;
+        font-size: 22upx;
+        border: 2upx solid #db9c30;
+        border-radius: 6upx;
         .active {
           background: #dc9c30;
         }
         .all-games {
           text-align: center;
           font-size: 100%;
-          height: 1.875rem;
+          height: 52upx;
           flex: 1;
-          line-height: 1.875rem;
+          line-height: 52upx;
         }
         .hot-games {
           text-align: center;
           font-size: 100%;
-          height: 1.875rem;
+          height: 52upx;
           flex: 1;
-          line-height: 1.875rem;
+          line-height: 52upx;
         }
       }
     }
@@ -355,7 +355,7 @@ export default {
       position: relative;
       // height: 92upx;
       // margin-bottom: 16upx;
-      padding: 0.2rem 6upx;
+      padding: 5upx 6upx;
       background-color: #3a3a3a;
       white-space: nowrap;
       line-height: 60rpx;
@@ -364,18 +364,18 @@ export default {
         display: inline-flex;
         vertical-align: middle;
         /* height: 41px; */
-        line-height: 1.2rem;
+        line-height: 33upx;
         padding: 0 14px;
         color: #fff;
-        font-size: 0.8125rem;
+        font-size: 22upx;
         width: min-content;
         font-weight: 500;
         border-radius: 30px;
         flex-direction: column;
         align-items: center;
         .bgicon {
-          width: 2.185rem;
-          height: 2.185rem;
+          width: 60upx;
+          height: 60upx;
           margin-right: 10upx;
           margin-top: 6upx;
           .img {
@@ -384,7 +384,7 @@ export default {
           }
         }
         span {
-          margin-top: 0.1rem;
+          margin-top: 2upx;
         }
       }
 
@@ -408,15 +408,15 @@ export default {
       display: flex;
       align-items: center;
       &__input {
-        height: 2rem;
+        height: 55upx;
         background: #000;
-        padding-left: 0.625rem;
-        border-radius: 0.1875rem;
-        font-size: 1rem;
+        padding-left: 17upx;
+        border-radius: 5upx;
+        font-size: 27upx;
         width: 100%;
-        border: 0.0625rem solid rgba(255, 172, 48, 0.5);
+        border: 2upx solid rgba(255, 172, 48, 0.5);
         flex: 0 0 85%;
-        margin-right: 1.25rem;
+        margin-right: 34upx;
       }
       &__empty {
         color: #999;
@@ -436,10 +436,10 @@ export default {
       color: #9ea9b3;
       overflow-x: auto;
       background: #2b3043;
-      border-top: 0.0625rem solid rgba(0, 0, 0, 0.5);
-      border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.5);
+      border-top: 2upx solid rgba(0, 0, 0, 0.5);
+      border-bottom: 2upx solid rgba(0, 0, 0, 0.5);
       position: relative;
-      height: 2.75rem;
+      height: 76upx;
       // height: 92upx;
       // margin-bottom: 16upx;
       padding: 0;
@@ -450,11 +450,11 @@ export default {
         display: inline-flex;
         vertical-align: middle;
         /* height: 41px; */
-        line-height: 1.2rem;
+        line-height: 33upx;
         padding: 0 14px;
         color: #fff;
         background: #171717;
-        font-size: 0.8125rem;
+        font-size: 22upx;
         font-weight: 500;
         border-radius: 0px;
         flex-direction: row;
@@ -464,8 +464,8 @@ export default {
         max-width: 34%;
 
         .bgicon {
-          width: 2.185rem;
-          height: 2.185rem;
+          width: 60upx;
+          height: 60upx;
           margin-right: 10upx;
           margin-top: 6upx;
           .img {
@@ -474,10 +474,10 @@ export default {
           }
         }
         span {
-          margin-top: 0.1rem;
-          line-height: 2.375rem;
+          margin-top: 2upx;
+          line-height: 65upx;
           font-weight: 500;
-          font-size: 0.75rem;
+          font-size: 20upx;
         }
       }
 
@@ -490,7 +490,7 @@ export default {
 
         color: #fff;
         background: #000;
-        border-bottom: 0.1875rem solid #ff9000;
+        border-bottom: 5upx solid #ff9000;
       }
     }
   }
@@ -500,8 +500,8 @@ export default {
     .game {
       position: relative;
       width: 25%;
-      min-height: 8.125rem;
-      padding: 0 0.625rem 1.25rem;
+      min-height: 225upx;
+      padding: 0 17upx 34upx;
       // background: url("../../static/image/indexImg/game-bg.png") no-repeat center/contain;
       .inner {
         position: relative;
@@ -511,12 +511,12 @@ export default {
         justify-content: center;
         align-items: center;
         .game-image {
-          padding: 0.3125rem;
+          padding: 8upx;
           display: flex;
           &::before {
             position: absolute;
-            width: 4.375rem;
-            height: 0.9375rem;
+            width: 121upx;
+            height: 26upx;
             background-image: -webkit-gradient(
               linear,
               left top,
@@ -524,29 +524,29 @@ export default {
               from(hsla(0, 0%, 100%, 0.1)),
               to(hsla(0, 0%, 100%, 0))
             );
-            border-radius: 0.3125rem;
-            top: 0.0625rem;
+            border-radius: 8upx;
+            top: 1upx;
             left: 50%;
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
             content: "";
           }
           .img {
-            width: 4.0615rem;
-            height: 4.0615rem;
+            width: 112upx;
+            height: 112upx;
             border-radius: 50%;
           }
         }
 
         .title {
-          font-size: 0.8125rem;
+          font-size: 22upx;
           display: -webkit-box;
           display: flex;
           justify-content: center;
           align-items: center;
           color: white;
-          font-size: 0.6875rem;
-          padding-top: 0.5rem;
+          font-size: 19upx;
+          padding-top: 13upx;
           word-break: break-word;
         }
       }

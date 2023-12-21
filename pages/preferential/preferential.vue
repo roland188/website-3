@@ -361,8 +361,8 @@ page {
 }
 @media screen and (min-width: 560px) {
     .nav-wrap {
-        width: 27rem;
-        max-width: 27rem;
+        width: 750upx;
+        max-width: 750upx;
     }
 }
 .perfer-wrap {

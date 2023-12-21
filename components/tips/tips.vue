@@ -288,8 +288,8 @@ export default {
 .alertBut {
   flex-grow: 1;
   font-size: 14px;
-  height: 2rem;
-  line-height: 2rem;
+  height: 55upx;
+  line-height: 55upx;
 }
 
 .swiper {

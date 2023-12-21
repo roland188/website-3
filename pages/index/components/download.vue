@@ -107,7 +107,7 @@ export default {
 <style lang="less" scoped>
 .fixedCon {
   width: 100%;
-  height: 2.5rem;
+  height: 69upx;
   margin-top: 52px;
   background: rgba(51,51,51,.9);
   position: fixed;
@@ -119,8 +119,8 @@ export default {
   align-items: center;
 
   .close {
-    width: 1rem;
-    height: 1rem;
+    width: 27upx;
+    height: 27upx;
   }
 
   .con {
@@ -131,20 +131,20 @@ export default {
     text-align: center;
 
     .title1 {
-      font-size: .875rem;
+      font-size: 24upx;
       color: #e4e4e4;
     }
   }
 
   .btn {
-    height: 1.65rem;
-    line-height: 1.65rem;
+    height: 45upx;
+    line-height: 45upx;
     text-align: center;
-    font-size: .775rem;
+    font-size: 21upx;
     text-transform: uppercase;
     color: white;
     border-radius: 8upx;
-    padding: 0 0.2rem;
+    padding: 0 5upx;
     border: 1px solid white;
   }
 
@@ -156,8 +156,8 @@ export default {
 
 @media screen and (min-width: 560px) {
   .fixedCon {
-    width: 27rem;
-    max-width: 27rem;
+    width: 750upx;
+    max-width: 750upx;
   }
 }
 </style>
