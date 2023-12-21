@@ -18,8 +18,8 @@
           <image
               class="img"
               :src="
-                  item.imgUrlApp
-                  ? $config.getImgUrl(item.imgUrlApp)
+                  item.topUrl
+                  ? $config.getImgUrl(item.topUrl)
                   : item.pictureUrl
                   ? $config.getImgUrl(item.pictureUrl)
                   : noDate

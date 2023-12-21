@@ -32,7 +32,7 @@
     <view >
       <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 0"/>
       <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id != 0 && type == 3"/>
-      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id != 0 && type == 2"/>
+      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent"  :gameId="id"  v-if="id != 0 && type == 2"/>
       <MultiGameList  
         :gameId="id" 
         :navIndex="navIndex"  

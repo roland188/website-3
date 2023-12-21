@@ -266,6 +266,10 @@ api.hotGame = function(callback = null, isLoading = false) {
 api.recommendGame = function(callback = null, isLoading = false) {
 	server.get("/game/api/v1/game/recommendGame", null, callback, isLoading);
 };
+
+api.recommendGameA = function(gameKindId,vendorId,callback = null, isLoading = false) {
+	server.get("/game/api/v1/game/recommendGame?gameKindId=" + gameKindId + "&vendorId=" + vendorId,null, callback, isLoading);
+};
 /**
  * 游戏详情接口
  * @param {Function} callback 回调函数
