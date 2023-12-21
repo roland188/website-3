@@ -158,7 +158,7 @@ export default {
 <style lang="less" scoped>
 .banner-wrap {
   width: 100%;
-  height: 225upx;
+  height: 100%;
   position: relative;
   ::v-deep .screen-swiper {
     min-height: 225upx;
