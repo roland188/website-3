@@ -435,11 +435,7 @@
   "k9c9e8dde": "The application is successful, please wait for the platform to review",
   "k7b4ca9d0": "Failed to withdraw, please try again",
   "k7566754d": "The amount exceeds the limit, please enter the correct amount",
-  "ked3a7be8": "Minimum withdrawal amount",
-  "k508e0619": "Digital Currency Wallet",
-  "k67b7a760": "Only positive integers can be entered",
   "k7863f28d": "Refresh successful",
-  "k42dc4d8a": "Please enter the amount",
   "k3f63de52": "recharge record",
   "ke54e2a8a": "Bank card transfer",
   "k4f69cbc9": "forgot password",
@@ -1002,5 +998,13 @@
   "kdfde23b1": "Network request failed",
   "kbe0c4277": "Load failed, please try again",
   "k944ef358": "Your verification information is wrong, and there are {surplusCount} times of verification opportunities, and the account will be frozen if you exceed the number of times! ",
-  "k25c895d5": "Please enter your password."
+  "k25c895d5": "Please enter your password.",
+  "k4de11e23": "Home",
+  "kfac3101b": "Discount",
+  "k50afad6e": "About online casino XOC88",
+  "k5d4aa099": " XOC88 Online Casino is a casino that has obtained legal online gambling licenses authorized by the Isle of Man Special Economic Zone and the Cagayan Special Economic Zone Freeport. The goal of \"Online Casino\" is to ensure fairness between customers and the company and to fully demonstrate objective quality and capabilities...",
+  "k33e1b430": "All games",
+  "k29b71479": "Popular Games",
+  "k8220fd33": "Please enter the game name",
+  "k816ce026": "Download"
 }
