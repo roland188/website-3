@@ -22,7 +22,14 @@
             <!-- 熱門 常玩 推薦 tab -->
             <!-- <HomeTabs ref="HomeTabs" :hotList="hotList" :tuiList="tuiList" :changList="changList" :goToGame="difference" :isLogin="login" /> -->
             <!-- 游戏菜单 -->
-            <GameList ref="gameList" :arr="arr" @difference="differencePre" @changeRightData="changeRightData" :leftArray="leftArray" :gamemenus="gamemenus" :gamemenusparent="gamemenusparent" :leftMenuIcon="leftMenuIcon" />
+            <GameList ref="gameList" :arr="arr" 
+              @difference="differencePre" 
+              @changeRightData="changeRightData" 
+              @goGameDataClick="goGameDataClick"
+              :leftArray="leftArray" 
+              :gamemenus="gamemenus" 
+              :gamemenusparent="gamemenusparent" 
+              :leftMenuIcon="leftMenuIcon" />
             <!-- <PrizePool></PrizePool>
             <OtherInfo></OtherInfo> -->
           </view>

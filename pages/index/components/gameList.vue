@@ -30,15 +30,28 @@
     </scroll-view>
     <!-- GameList -->
     <view >
-      <HotGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id == 0"/>
-      <LiveGameList :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent" v-if="id != 0 && type == 3"/>
-      <SportGameList  :gameList="gameList" :navIndex="navIndex" @difference="difference" :gamemenusparent="gamemenusparent"  :gameId="id"  v-if="id != 0 && type == 2"/>
+      <HotGameList 
+        :gameList="gameList" 
+        :navIndex="navIndex" 
+        @difference="difference" 
+        :gamemenusparent="gamemenusparent" 
+        v-if="id == 0"/>
+      <LiveGameList 
+        :gameList="gameList" 
+        :navIndex="navIndex" 
+        @goGameDataClick="goGameDataClick"
+        v-if="id != 0 && type == 3"/>
+      <SportGameList  
+        :gameList="gameList" 
+        @goGameDataClick="goGameDataClick"
+        :gameId="id"  v-if="id != 0 && type == 2"/>
       <MultiGameList  
         :gameId="id" 
         :navIndex="navIndex"  
         :gamemenusparent="gamemenusparent"
         :gameMenus="gamemenus"
         @difference="difference" 
+        @goGameDataClick="goGameDataClick"
         v-if="id != 0 && type == 1"/>
     </view>
   </view>
@@ -132,6 +145,11 @@ export default {
         navIndex,
         index,
       });
+    },
+    goGameDataClick(item) {
+      this.$emit('goGameDataClick', {
+        item
+      })
     },
     getTabItemWidth() {
       let query = uni

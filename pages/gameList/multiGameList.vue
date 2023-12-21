@@ -73,7 +73,7 @@
         <view class="game">
           <view
             class="inner inner1"
-            @tap="difference(gamemenusparent, item, navIndex, index)"
+            @tap="goGameDataClick(item)"
           >
             <view class="game-image">
               <image
@@ -161,12 +161,9 @@ export default {
     }
   },
   methods: {
-    difference(gamemenusparent, item, navIndex, index) {
-      this.$emit("difference", {
-        gamemenusparent,
-        item,
-        navIndex,
-        index,
+    goGameDataClick(item) {
+      this.$emit("goGameDataClick", {
+        item
       });
     },
     initData() {

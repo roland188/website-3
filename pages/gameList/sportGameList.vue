@@ -9,7 +9,7 @@
             <view
               class="inner inner1"
               :class="[2,4,6,8].includes(gameId) ? 'game1' : ''"
-              @tap="difference(gamemenusparent, item, navIndex, index)"
+              @tap="goGameDataClick(item)"
             >
               <image
                 class="img"
@@ -59,12 +59,9 @@ export default {
   created() {},
   mounted() {},
   methods: {
-    difference(gamemenusparent, item, navIndex, index) {
-      this.$emit("difference", {
-        gamemenusparent,
-        item,
-        navIndex,
-        index,
+    goGameDataClick(item) {
+      this.$emit("goGameDataClick", {
+        item
       });
     },
   },
