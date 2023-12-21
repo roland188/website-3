@@ -24,7 +24,7 @@
           @tap="localeChange"
           :src="$config.localImgUrl(lang)"
         ></image> -->
-        <image class="languageImg" @tap="toPage('../Message/Message')" :src="'../../static/image/indexImg/msg-icon.svg'" mode="aspectFit"></image>
+        <image class="languageImg" @tap="toPage('../aboutUs/aboutUs')" :src="'../../static/image/indexImg/msg-icon.svg'" mode="aspectFit"></image>
       </view>
     </uni-nav-bar>
     <view
@@ -82,15 +82,15 @@ export default {
       this.$emit("updateLoadData");
     },
     toPage(name) {
-      if (!this.$api.isLogin()) {
-        uni.navigateTo({
-          url: "../Login/Login",
-        });
-      } else {
+      // if (!this.$api.isLogin()) {
+      //   uni.navigateTo({
+      //     url: "../Login/Login",
+      //   });
+      // } else {
         uni.navigateTo({
           url: name,
         });
-      }
+      // }
     },
     // 登出
     localeChange() {

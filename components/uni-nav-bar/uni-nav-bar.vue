@@ -145,10 +145,10 @@ export default {
 $nav-height: 52px;
 .uni-nav-bar-text {
   /* #ifdef APP-PLUS */
-  font-size: 34rpx;
+  font-size: 1rem;
   /* #endif */
   /* #ifndef APP-PLUS */
-  font-size: $uni-font-size-lg;
+  font-size: $uni-font-size-base;
   /* #endif */
 }
 .uni-nav-bar-right-text {
@@ -161,6 +161,7 @@ $nav-height: 52px;
 
 .uni-navbar {
   width: 100%;
+  height: 52px;
 }
 
 .uni-navbar__content {

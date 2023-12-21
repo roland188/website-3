@@ -20,6 +20,14 @@
 			}
 		},
 		{
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/gameList/gameList",
 			"style": {
 				"navigationStyle": "custom"
