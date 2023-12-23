@@ -99,7 +99,6 @@ export default {
       this.isShowLanguage = !this.isShowLanguage;
     },
     onLeft() {
-      console.log('AAAA');
       this.$emit("onLeft");
     },
   },

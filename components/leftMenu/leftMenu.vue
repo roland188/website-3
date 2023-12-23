@@ -44,12 +44,13 @@
           <view class="item" @click="openUrl('../../pages/recharge/recharge')">
             Nạp tiền nhanh
           </view>
-          <view class="item" @click="openUrl('../../pages/account/account')">
-            Rút tiền trực tuyến
+          <view class="item" @click="openPcVersion()">
+            {{ $t('返回PC客户端') }}
           </view>
-          <view class="item" @click="goAgentPath('/pages/agent/agent')">
-            Đại lí
-          </view>
+          <!-- #ifdef H5 -->
+          <view class="item" @click="dowApp()" v-if="isMaskApp">Địa chỉ tải xuống APP</view>
+          <!-- #endif -->
+          
           <!-- #ifdef H5 -->
           <view class="item" @click="dowApp()" v-if="isMaskApp">Địa chỉ tải xuống APP</view>
           <!-- #endif -->
@@ -177,6 +178,9 @@ export default {
       uni.navigateTo({
         url: url,
       });
+    },
+    openPcVersion() {
+      window.location.href = 'https://lyjqv6pvv2.com'
     },
     openUrl(e) {
       if (!this.$api.isLogin()) {

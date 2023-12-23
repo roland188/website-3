@@ -138,13 +138,18 @@ export default {
       // if (!this.leftMenuIcon[index]) return "";
       // return this.leftMenuIcon[index][index == navIndex ? "imgs" : "img"];
     },
-    difference(gamemenusparent, item, navIndex, index) {
-      this.$emit("difference", {
-        gamemenusparent,
-        item,
-        navIndex,
-        index,
-      });
+    difference({gamemenusparent, item, navIndex, index}) {
+      this.leftArray.forEach((left, idx) => {
+        if(left.id == item.id) {
+          this.navIndex = idx;
+        }
+      })
+      // this.$emit("difference", {
+      //   gamemenusparent,
+      //   item,
+      //   navIndex,
+      //   index,
+      // });
     },
     goGameDataClick(item) {
       this.$emit('goGameDataClick', {
