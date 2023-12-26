@@ -44,9 +44,6 @@
           <view class="item" @click="openUrl('../../pages/recharge/recharge')">
             Nạp tiền nhanh
           </view>
-          <!-- #ifdef H5 -->
-          <view class="item" @click="openPcVersion()" v-if="isMaskApp">Phiên bản PC</view>
-          <!-- #endif -->
           
           <!-- #ifdef H5 -->
           <view class="item" @click="dowApp()" v-if="isMaskApp">Địa chỉ tải xuống APP</view>
@@ -62,6 +59,8 @@
           >
             CSKH
           </view>
+          
+          <view class="item" @click="openPcVersion()" v-if="isMaskApp">Phiên bản PC</view>          
         </view>
       </view>
     </chunLei-modal>
