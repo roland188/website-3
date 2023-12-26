@@ -45,7 +45,7 @@
             Nạp tiền nhanh
           </view>
           <!-- #ifdef H5 -->
-          <view class="item" @click="openPcVersion()" v-if="isMaskApp">{{ $t('返回PC客户端') }}</view>
+          <view class="item" @click="openPcVersion()" v-if="isMaskApp">Phiên bản PC</view>
           <!-- #endif -->
           
           <!-- #ifdef H5 -->
