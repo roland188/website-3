@@ -44,11 +44,8 @@
           <view class="item" @click="openUrl('../../pages/recharge/recharge')">
             Nạp tiền nhanh
           </view>
-          <view class="item" @click="openPcVersion()">
-            {{ $t('返回PC客户端') }}
-          </view>
           <!-- #ifdef H5 -->
-          <view class="item" @click="dowApp()" v-if="isMaskApp">Địa chỉ tải xuống APP</view>
+          <view class="item" @click="openPcVersion()" v-if="isMaskApp">{{ $t('返回PC客户端') }}</view>
           <!-- #endif -->
           
           <!-- #ifdef H5 -->
